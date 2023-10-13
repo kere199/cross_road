@@ -24,7 +24,7 @@ class CarManager:
 
 
     def generate_cars(self):
-        if self.counter % 20 == 0:
+        if self.counter % 10 == 0:
             car = Turtle()
             car.shape("square")
             car.shapesize(stretch_wid=1, stretch_len=2)
@@ -40,7 +40,7 @@ class CarManager:
             if player.distance(car) < 20:
                 return True
         return False
-    
+       
     
 
 
