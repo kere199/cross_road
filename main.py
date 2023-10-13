@@ -9,10 +9,11 @@ screen.tracer(0)
 
 player = Player()
 scoreboard = Scoreboard()
+carmanager = CarManager()
 screen.listen()
 screen.onkeypress(player.move_up, "Up")
 scoreboard.print_level()
-carmanager = CarManager()
+# carmanager = CarManager()
 
 carspeed = 5
 game_is_on = True
