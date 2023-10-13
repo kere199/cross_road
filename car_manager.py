@@ -12,12 +12,17 @@ class CarManager:
         super().__init__()
         self.cars = []
         self.counter = 0
+        self.speed = 5
 
 
-    def move_cars(self, speed):
+    def move_cars(self):
         for car in self.cars:
-            car.setx(car.xcor() - speed)
+            car.setx(car.xcor() - self.speed)
             self.counter += 1
+
+    def increase_speed(self):
+        self.speed += 5
+
 
 
     def generate_cars(self):
@@ -32,11 +37,15 @@ class CarManager:
             self.cars.append(car)
 
 
-    def check_collision(self,player_pos):
+    def check_collision(self,player):
         for car in self.cars:
-            if car.distance(player_pos) < 20:
+            if player.distance(car) < 20:
                 return True
         return False
+    
+    
+
+
         
         
 
